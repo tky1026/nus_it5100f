@@ -6,7 +6,7 @@ if [ -z "$1" ]; then
 fi
 
 NOTEBOOK_FILE="$1"
-OUTPUT_DIR="./public"
+OUTPUT_DIR="./docs"
 OUTPUT_NAME="index"
 
 # Run nbconvert to convert the notebook to HTML
