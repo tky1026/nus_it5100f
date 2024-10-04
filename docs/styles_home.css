@@ -1,0 +1,100 @@
+/* Home Page Styles */
+
+/* General body styling for home page */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Title styling */
+h1 {
+    color: #ff5f6d;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+/* Intro section */
+.intro {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+/* Dashboard Panels */
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+}
+
+.panel {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-left: 5px solid #ff5f6d;
+}
+
+.panel:hover {
+    transform: translateY(-5px);
+}
+
+.panel h3 {
+    font-size: 1.5rem;
+    color: #ff5f6d;
+    margin-bottom: 10px;
+}
+
+.panel img {
+    width: 100%;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+.panel p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Call to action button */
+.cta a {
+    display: inline-block;
+    background-color: #ff5f6d;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.cta a:hover {
+    background-color: #ff866c;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .dashboard {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .dashboard {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Endomondo Data Analytics Project</title>
+
+    <link rel="stylesheet" href="styles_home.css">
+    <script>
+        function sendHeight() {
+            var body = document.body,
+                html = document.documentElement;
+    
+            var height = Math.max(body.scrollHeight, body.offsetHeight,
+                                  html.clientHeight, html.scrollHeight, html.offsetHeight);
+    
+            // Send the height to the parent window
+            window.parent.postMessage({ iframeHeight: height }, '*');
+        }
+    
+        // Call the function on page load and when the window is resized
+        window.addEventListener('load', sendHeight);
+        window.addEventListener('resize', sendHeight);
+    </script>
+</head>
+<body>
+
+<div class="intro">
+    <h1>Hello!</h1>
+    <p>
+        This project explores the Endomondo dataset using data preprocessing, supervised learning, and unsupervised learning techniques.
+        You can navigate to each section via the sidebar on the left, or explore the major sections below.
+    </p>
+</div>
+
+<div class="dashboard">
+    <div id="data-preprocessing" class="panel">
+        <h3>Data Preprocessing & EDA</h3>
+        <p>In this section, we focused on preparing the dataset for analysis by handling missing values, ensuring data consistency, and transforming the data into a usable format. Key steps include:</p>
+        <ul>
+            <li>Data cleaning: Handling null values and outliers.</li>
+            <li>Transformation: Standardizing columns and converting timestamps.</li>
+            <li>Exploratory Data Analysis (EDA): Initial visualizations and distributions of key variables.</li>
+        </ul>
+        <p>For more details on the data preprocessing and exploratory analysis steps, explore the full notebook.</p>
+        <div class="cta">
+            <a href="page1.html">View Full Notebook</a>
+        </div>
+    </div>
+
+    <div id="supervised-learning" class="panel">
+        <h3>Supervised Learning Techniques</h3>
+        <p>We applied various supervised learning techniques to predict workout outcomes. Here’s a comparison of model performance:</p>
+        <!-- <img src="model_performance.png" alt="Model Performance"> -->
+        <p>Explore the full notebook to see detailed model comparisons and evaluations.</p>
+        <div class="cta">
+            <a href="page2.html">View Full Notebook</a>
+        </div>
+    </div>
+
+    <div id="unsupervised-learning" class="panel">
+        <h3>Unsupervised Learning Techniques</h3>
+        <p>In this section, we explored clustering techniques. Here’s a visualization of the clusters identified in the data:</p>
+        <!-- <img src="cluster_visualization.png" alt="Cluster Visualization"> -->
+        <p>Explore the full notebook for more details on clustering and dimensionality reduction techniques.</p>
+        <div class="cta">
+            <a href="page3.html">View Full Notebook</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
