@@ -4,7 +4,7 @@
     <!-- Metadata and Title -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT500F Data Analytics and AI in Practice</title>
+    <title>IT5100F Data Analytics and AI in Practice</title>
     
     <!-- Link to External CSS -->
     <link rel="stylesheet" href="styles_index.css">
@@ -14,6 +14,7 @@
         // Function to dynamically change the iframe source
         function loadPage(page) {
             document.getElementById('mainIframe').src = page;
+            window.scrollTo(0, 0);
         }
 
         // Listen for messages from the iframe to adjust its height
@@ -28,7 +29,7 @@
 <body>
 
 <header>
-    IT500F Data Analytics and AI in Practice
+    IT5100F Data Analytics and AI in Practice
 </header>
 
 <div class="container">
@@ -39,6 +40,7 @@
         <a href="#" onclick="loadPage('page1.html'); return false;">Data Preprocessing & EDA</a>
         <a href="#" onclick="loadPage('page2.html'); return false;">Supervised Learning</a>
         <a href="#" onclick="loadPage('page3.html'); return false;">Unsupervised Learning</a>
+        <a href="#" onclick="loadPage('page4.html'); return false;">Further Exploration</a>
     </div>
 
     <!-- Main Content with Embedded Iframe -->
@@ -47,5 +49,9 @@
     </div>
 </div>
 
+<footer class="footer">
+    <p>&copy; 2024 Yi Xiang, Yi Geng, Ru Jin, Gary & Kuan Yuee. All rights reserved.</p>
+    <!-- <p>Designed as part of the Data Analytics project for the NUS IT5100F course.</p> -->
+</footer>
 </body>
 </html>
