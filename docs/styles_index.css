@@ -86,3 +86,21 @@ iframe {
         border-bottom: 1px solid #e0e0e0;
     }
 }
+
+/* Footer Styles */
+.footer {
+    background-color: #f9f9f9; /* Light background for the footer */
+    color: #333; /* Text color */
+    text-align: center; /* Centered text */
+    padding: 10px; /* Padding for spacing */
+    position: relative; /* To allow positioning */
+    bottom: 0; /* Position at the bottom */
+    width: 100%; /* Full width */
+    margin-top: 10px; /* Space above the footer */
+    border-top: 1px solid #ccc; /* Top border for separation */
+}
+
+.footer p {
+    margin: 5px 0; /* Margin for spacing between lines */
+    font-size: 0.9rem; /* Smaller font size for footer text */
+}
