@@ -47,7 +47,10 @@
     <script>
         // Function to dynamically change the iframe source
         function loadPage(page) {
-            document.getElementById('mainIframe').src = page;
+            // document.getElementById('mainIframe').src = page;
+            var iframe = document.getElementById('mainIframe');
+            iframe.style.height = '0px'; // Reset height
+            iframe.src = page;
             window.scrollTo({top: 0, behavior: 'smooth'});
         }
 
