@@ -47,7 +47,6 @@
     <script>
         // Function to dynamically change the iframe source
         function loadPage(page) {
-            // document.getElementById('mainIframe').src = page;
             var iframe = document.getElementById('mainIframe');
             iframe.style.height = '0px'; // Reset height
             iframe.src = page;
@@ -60,6 +59,13 @@
                 var iframe = document.getElementById('mainIframe');
                 iframe.style.height = event.data.iframeHeight + 'px';
             }
+        });
+
+        // Add load event listener to iframe
+        var iframe = document.getElementById('mainIframe');
+        iframe.addEventListener('load', function() {
+            // Scroll parent page to top when iframe content loads
+            window.scrollTo({top: 0, behavior: 'smooth'});
         });
 
         // Get the button:
